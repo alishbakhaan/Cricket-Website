@@ -1,0 +1,128 @@
+.lazy-load-image-background{
+  width: 100%;
+  height: 100%;
+  }
+.lazy-load-image-background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+.btn{
+  background: var(--gradient);
+}
+.top{
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+}
+.show{
+  background-color: var(--black3);
+}
+.hide{
+  transform: translateY(-60px);
+}
+.mobileView{
+  background: var(--black3);
+}
+.mobileView  .menuItems {
+  display: flex;
+  position: absolute;
+  top: 95px;
+  left: 0;
+  background: var(--black3);
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mobileView  .menuItem {
+  font-size: 20px;
+  width: 100%;
+  height: auto;
+  padding: 15px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* @media (max-width:768px){
+  .menuItem :first-child{
+    display: none;
+  } */
+/* } */
+.tabItem {
+  transition: color ease 0.3s;
+}
+.movingBg{
+  background-image: var(--gradient);
+  transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+}
+.arrow{
+  transform: translateY(-50%);
+}
+@media (min-width:768px){
+  .skeletonItem, .carouselItem{
+    width: calc(25% - 15px);
+  }
+}
+@media (min-width:1024px){
+  .skeletonItem, .carouselItem{
+    width: calc(20% - 16px);
+  }
+}
+/* Custom Radio Buttons */
+.custom-radio {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ACACAC;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .custom-radio {
+  border-color: #1DB954;
+  background-color: #1DB954;
+}
+
+input[type="radio"]:checked + .custom-radio::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Custom Checkboxes */
+.custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ACACAC;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+  border-color: #1DB954;
+  background-color: #1DB954;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
